@@ -124,3 +124,12 @@ function! GetStatusEx()
         endif
         return str
 endfunction
+
+
+"vundle setting
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
+ 
+" vim-scripts for git
+"github のvim-fugitive
+Bundle "tpope/vim-fugitive"
