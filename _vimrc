@@ -132,4 +132,5 @@ call vundle#rc()
  
 " vim-scripts for git
 "github のvim-fugitive
-Bundle "tpope/vim-fugitive"
+Bundle 'tpope/vim-fugitive'
+Bundle 'Shougo/neocomplcache'
