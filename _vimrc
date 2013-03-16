@@ -102,7 +102,7 @@ if has("autocmd")
         " プラグイン、ファイルタイプ別インデントを有効
         filetype plugin indent on
         " textファイルのカラムを78に設定
-        autocmd FileType text setlocal textwidth=78
+        autocmd FileType text setlocal textwidth=100
         " カーソル位置を記憶しておく
         autocmd BufReadPost *
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -134,3 +134,23 @@ call vundle#rc()
 "github のvim-fugitive
 Bundle 'tpope/vim-fugitive'
 Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neosnippet'
+Bundle 'honza/snipmate-snippets'
+
+" for Bundle setting
+let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
+
+
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?  "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?  "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+
