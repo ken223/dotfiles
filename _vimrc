@@ -135,7 +135,8 @@ call vundle#rc()
 Bundle 'tpope/vim-fugitive'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
-Bundle 'honza/snipmate-snippets'
+Bundle 'honza/vim-snippets'
+Bundle 'mitechie/pyflakes-pathogen'
 
 " for Bundle setting
 let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
