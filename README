@@ -1,1 +1,4 @@
-ln -s dotfiles/.vimrc 
+$sh setup.sh
+And type this.
+$ vim hoge
+:BundleInstall
