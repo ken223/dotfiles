@@ -135,7 +135,7 @@ call vundle#rc()
 Bundle 'tpope/vim-fugitive'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
-Bundle 'honza/vim-snippets'
+Bundle 'ken223/vim-snippets'
 Bundle 'mitechie/pyflakes-pathogen'
 
 " for Bundle setting
