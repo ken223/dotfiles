@@ -139,7 +139,7 @@ Bundle 'ken223/vim-snippets'
 Bundle 'mitechie/pyflakes-pathogen'
 
 " for Bundle setting
-let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 
 " Plugin key-mappings.
