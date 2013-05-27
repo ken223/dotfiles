@@ -137,6 +137,7 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'ken223/vim-snippets'
 Bundle 'mitechie/pyflakes-pathogen'
+Bundle 'vim-scripts/sudo.vim'
 
 " for Bundle setting
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
