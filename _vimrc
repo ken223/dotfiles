@@ -136,7 +136,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'ken223/vim-snippets'
-Bundle 'mitechie/pyflakes-pathogen'
+Bundle 'kevinw/pyflakes-vim'
 Bundle 'vim-scripts/sudo.vim'
 
 " for Bundle setting
