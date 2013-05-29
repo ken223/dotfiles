@@ -136,8 +136,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'ken223/vim-snippets'
-Bundle 'kevinw/pyflakes-vim'
+Bundle 'mitechie/pyflakes-pathogen'
 Bundle 'vim-scripts/sudo.vim'
+Bundle 'scrooloose/nerdtree'
 
 " for Bundle setting
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
@@ -155,4 +156,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?  "\<Plug>(neosnippet_expa
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+
+" For NerdTree
+nmap <Leader>n :NERDTreeToggle<CR>
 
