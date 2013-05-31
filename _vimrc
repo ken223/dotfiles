@@ -4,7 +4,7 @@
 " viとの互換をとらない
 set nocompatible
 " コマンド、検索パターンを50個まで履歴に残す
-set history=50
+set history=100
 
 "-----------------------------------------------------------------------------
 " 検索関連
@@ -101,7 +101,7 @@ set encoding=utf-8
 if has("autocmd")
         " プラグイン、ファイルタイプ別インデントを有効
         filetype plugin indent on
-        " textファイルのカラムを78に設定
+        " textファイルのカラムを100に設定
         autocmd FileType text setlocal textwidth=100
         " カーソル位置を記憶しておく
         autocmd BufReadPost *
@@ -158,5 +158,23 @@ if has('conceal')
 endif
 
 " For NerdTree
-nmap <Leader>n :NERDTreeToggle<CR>
+"<C-n>でNERDTreeをオンオフ。いつでもどこでも。
+nmap <silent> <C-n>      :NERDTreeToggle<CR>
+vmap <silent> <C-n> <Esc>:NERDTreeToggle<CR>
+omap <silent> <C-n>      :NERDTreeToggle<CR>
+imap <silent> <C-n> <Esc>:NERDTreeToggle<CR>
+cmap <silent> <C-n> <C-u>:NERDTreeToggle<CR>
+
+"他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
+""How can I close vim if the only window left open is a NERDTree?
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"NERDTreeShowHidden 隠しファイルを表示するか？
+"f コマンドの設定値
+"0 : 隠しファイルを表示しない。
+"1 : 隠しファイルを表示する。
+"Values: 0 or 1.
+"Default: 0.
+"let g:NERDTreeShowHidden=0
+let g:NERDTreeShowHidden=1
 
