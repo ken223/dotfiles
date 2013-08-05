@@ -133,10 +133,16 @@ call vundle#rc()
 " vim-scripts for git
 "github のvim-fugitive
 Bundle 'tpope/vim-fugitive'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'ken223/vim-snippets'
-Bundle 'mitechie/pyflakes-pathogen'
+"Bundle 'mitechie/pyflakes-pathogen'
+Bundle 'scrooloose/syntastic.git' , {
+  \ "build": {
+  \   "mac": ["pip install flake8", "npm -g install coffeelint"],
+  \   "unix": ["pip install flake8", "npm -g install coffeelint"],
+  \ }}
 Bundle 'vim-scripts/sudo.vim'
 Bundle 'scrooloose/nerdtree'
 
@@ -214,3 +220,12 @@ inoremap <expr><C-p> pumvisible() ? "\<C-p>" : "\<C-p>\<C-n>"
 inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
 " 補完をキャンセル
 inoremap <expr><C-e>  neocomplcache#close_popup()
+
+" 色設定 
+" coler scheme
+syntax enable
+colorscheme torte
+" 自動保管の色
+highlight Pmenu ctermbg=4 ctermfg=0
+highlight PmenuSel ctermbg=1 ctermfg=7
+highlight PMenuSbar ctermbg=4
