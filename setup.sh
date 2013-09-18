@@ -3,7 +3,7 @@
 VUNDLE_DIR="_vim/vundle.git"
 BUNDLE_DIR="_vim/bundle"
 
-if [ $1 = "delete" ] ; then
+if [ "$1" = "delete" ] ; then
   rm -rf ../.vimrc
   echo "rm -rf ../.vimrc"
   rm -rf ../.vim
