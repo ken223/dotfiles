@@ -138,11 +138,11 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'ken223/vim-snippets'
 "Bundle 'mitechie/pyflakes-pathogen'
-Bundle 'scrooloose/syntastic.git' , {
-  \ "build": {
-  \   "mac": ["pip install flake8", "npm -g install coffeelint"],
-  \   "unix": ["pip install flake8", "npm -g install coffeelint"],
-  \ }}
+"Bundle 'scrooloose/syntastic.git' , {
+"  \ "build": {
+"  \   "mac": ["pip install flake8", "npm -g install coffeelint"],
+"  \   "unix": ["pip install flake8", "npm -g install coffeelint"],
+"  \ }}
 Bundle 'vim-scripts/sudo.vim'
 Bundle 'scrooloose/nerdtree'
 
@@ -229,3 +229,8 @@ colorscheme torte
 highlight Pmenu ctermbg=4 ctermfg=0
 highlight PmenuSel ctermbg=1 ctermfg=7
 highlight PMenuSbar ctermbg=4
+
+" for golang
+if $GOROOT != ''
+  set rtp+=$GOROOT/misc/vim
+endif
